@@ -42,7 +42,36 @@ class HexSweeper
 
   end
 
+  def special_start(mine, minefield)
+    if mine.is_bomb
+      mine.bomb = false
+      minefield.reveal_spaces(mine)
+      minefield.bombs -= 1
+    else 
+      minefield.reveal_spaces(mine)
+    end
+  end
+
+  def flag(mine, minefield)
+    #...
+  end
+
+  def click_mine(mine, minefield)
+    #...
+  end
+
+  def win()
+  end
+
+  def lost()
+  end
+
 end
 if __FILE__ == $0
-  # your code
+  minefield = args
+  while minefield.bombs > 0
+    #if first click special start
+  end
+
+  end
 end

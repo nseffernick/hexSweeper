@@ -50,4 +50,6 @@ class Mine
     self.flagged = true
   end
 
+  
+
 end
